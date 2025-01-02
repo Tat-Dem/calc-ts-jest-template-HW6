@@ -1,5 +1,6 @@
 import {codeGeneratorEstonian, codeGeneratorLatvian, codeGeneratorLithuanian} from "../src/codeGenerator";
 
+describe("Code Generator Tests", () => {
 test("Estonian code starts with EST-",() =>{
 const code: string = codeGeneratorEstonian();
 expect (code.startsWith("EST-")).toBeTruthy();
@@ -32,4 +33,4 @@ test("Code matches the expected format",() =>{
     expect(/LVA-\d{4}/.test(LatvianCode)).toBe(true);
     expect(/LTU-\d{4}/.test(LithuanianCode)).toBe(true);
     });
-
+});
